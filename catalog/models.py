@@ -109,7 +109,7 @@ class Domain(models.Model):
     The availability and health statuses are Foreign Keys.
     """
     name = models.CharField('Name', max_length=100, unique=True, help_text='Enter a domain name')
-    registrar = models.CharField('Registrar', max_length=100, unique=True, help_text='Enter the name of the registrar where this domain is registered', null=True)
+    registrar = models.CharField('Registrar', max_length=100, help_text='Enter the name of the registrar where this domain is registered', null=True)
     dns_record = models.CharField('DNS Record', max_length=500, help_text='Enter domain DNS records', null=True)
     health_dns = models.CharField('DNS Health', max_length=100, help_text='Domain health status based on passive DNS (e.g. Healthy, Burned)', null=True)
     creation = models.DateField('Purchase Date', help_text='Domain purchase date')
